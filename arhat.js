@@ -6,8 +6,6 @@ var fs   = require("fs"); //9
 
 http.createServer(function (request, response) { // 2
    //request.on("end", function () { // 3
-
-
     fs.readFile('test.txt', 'utf-8', function (error, data){ // 12
 
         response.writeHead(200, { // 4
@@ -15,14 +13,11 @@ http.createServer(function (request, response) { // 2
         });
 
         data = parseInt(data) + 1; // 10
-
         fs.writeFile('test.txt', data); // 11
-
         response.end('Times this page was refreshed: [' + data + ']'); // 5
     });
    //});
 }).listen(8080); // 6
-        console.log(data);
 
 console.log('Server listening. (http://localhost:8080). Refresh the page several times.'); // 8
 
