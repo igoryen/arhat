@@ -22,6 +22,8 @@ http.createServer(function (request, response) { // 2
     });
    //});
 }).listen(8080); // 6
+        console.log(data);
+
 console.log('Server listening. (http://localhost:8080). Refresh the page several times.'); // 8
 
 /*
