@@ -8,11 +8,11 @@ http.createServer(function (request, response) { // 2
    //request.on("end", function () { // 3
 
 
-    fs.readFile('test.txt', 'utf-8', function (error, data){
+    fs.readFile('test.txt', 'utf-8', function (error, data){ // 12
 
         response.writeHead(200, { // 4
            'Content-Type': 'text/plain' // 7
-         });
+        });
 
         data = parseInt(data) + 1; // 10
 
@@ -35,7 +35,7 @@ console.log('Server listening. (http://localhost:8080). Refresh the page several
     This event is called when client sent all data and is waiting for response.
  4) Write headers to the response.
     200 is HTTP status code (this one means success)
- 5) Send data and end response.
+ 5) response.end() - to send data and end response.
  6) Listen on the 8080 port.
  7) Second parameter, holds header fields in object
     Content-Type is 'text/plain' because we are sending plain text
@@ -48,5 +48,9 @@ console.log('Server listening. (http://localhost:8080). Refresh the page several
       B: data
       C: encoding
       D: callback function
+  12) read file: 
+      file name: 'test.txt'
+      file encoding: utf-8
+       
 
 */
