@@ -43,14 +43,14 @@ console.log('Server listening. (http://localhost:8080). Refresh the page several
  9) fs.readFile() - to read a file
     fs.writeFile() - to write to a file
  10) Increment the number obtained from file.
- 11) fs.writeFile(A, B [, C, D])
-      A: file name
+ 11) fs.writeFile(A, B [, C, D]) - to write B into A
+      A: file (file name)
       B: data
       C: encoding
       D: callback function
-  12) read file: 
+  12) Every time the server recieves a request, read(obtain) the number from the file: 
       file name: 'test.txt'
       file encoding: utf-8
-       
+
 
 */
