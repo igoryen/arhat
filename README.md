@@ -17,4 +17,9 @@ Every time the server receives a request, the script:
 2) increments the number, 
 3) and writes the new number to the test.txt file.
 
-The fs.readFile() method 
+How to run:
+
+1) Open it in browser (http://localhost:8080) 
+2) and refresh it a few times. 
+
+Now, you may think that there is an error in the code because it seems to increment by two. This isn’t an error. Every time you request this URL, two requests are sent to the server. The first request is automatically made by the browser, which requests favicon.ico, and of course, the second request is for the URL (http://localhost:8080).
