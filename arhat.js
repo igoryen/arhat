@@ -43,5 +43,10 @@ console.log('Server listening. (http://localhost:8080)'); // 8
  9) fs.readFile() - to read a file
     fs.writeFile() - to write to a file
  10) Increment the number obtained from file.
+ 11) fs.writeFile(A, B [, C, D])
+      A: file name
+      B: data
+      C: encoding
+      D: callback function
 
 */
